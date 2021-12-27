@@ -43,7 +43,7 @@ public class SelenoidMobileDriver implements WebDriverProvider {
 
     private URL apkUrl() {
         try {
-            return new URL("");
+            return new URL("https://github.com/KristinaStolyarenko/DiplomMobile/raw/master/src/test/resources/Vivino%20Buy%20the%20Right%20Wine_v8.20.16_apkpure.com.apk");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
