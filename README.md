@@ -1,6 +1,6 @@
 # :wine_glass: Автотесты для мобильного приложения Vivino
 
-<img src="images/vivino.png">
+<img src="images/Vivino.png">
 
 ## :stethoscope: Стек:
 | GitHub | IDEA | Java | Junit5 | Gradle | Selenide | Selenoid | Browserstack | Allure Report | Allure TO | Jenkins | Jira |
