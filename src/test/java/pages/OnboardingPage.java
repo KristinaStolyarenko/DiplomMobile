@@ -27,8 +27,9 @@ public class OnboardingPage {
 
     public ElementsCollection onboardingScreenTextBlock = $$(MobileBy.id("vivino.web.app:id/description"));
 
-    public void checkOnboardingScreenText(String text) {
+    public OnboardingPage checkOnboardingScreenText(String text) {
         onboardingScreenTextBlock.shouldHave(texts(text));
         nextButton.click();
+        return this;
     }
 }

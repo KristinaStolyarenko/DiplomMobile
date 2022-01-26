@@ -1,7 +1,6 @@
-package tests.local;
+package tests;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.LoginPage;
 import pages.MainPage;
@@ -9,8 +8,7 @@ import pages.OnboardingPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("local_android")
-public class LocalAndroidSelenideTests extends LocalTestBase {
+public class VivinoAndroidTests extends TestBase {
     OnboardingPage onboardingPage = new OnboardingPage();
     LoginPage loginPage = new LoginPage();
     MainPage mainPage = new MainPage();
@@ -23,10 +21,10 @@ public class LocalAndroidSelenideTests extends LocalTestBase {
             onboardingPage.tryUsOutButton.click();
         });
         step("Check 'Try Us Out' onboarding screens", () -> {
-            onboardingPage.checkOnboardingScreenText("Get honest wine ratings on any wine from our community of millions of wine drinkers");
-            onboardingPage.checkOnboardingScreenText("Shop the world’s largest wine selection directly from your phone");
-            onboardingPage.checkOnboardingScreenText("Scan any bottle to learn all about the wine inside");
-            onboardingPage.checkOnboardingScreenText("Scan a restaurant wine list and choose your wine with confidence");
+            onboardingPage.checkOnboardingScreenText("Get honest wine ratings on any wine from our community of millions of wine drinkers")
+                    .checkOnboardingScreenText("Shop the world’s largest wine selection directly from your phone")
+                    .checkOnboardingScreenText("Scan any bottle to learn all about the wine inside")
+                    .checkOnboardingScreenText("Scan a restaurant wine list and choose your wine with confidence");
         });
         step("Check 'Try Us Out' onboarding is finished", () -> {
             onboardingPage.finalOnboardingScreenText.isDisplayed();
@@ -44,10 +42,10 @@ public class LocalAndroidSelenideTests extends LocalTestBase {
             onboardingPage.howItWorksButton.click();
         });
         step("Check 'How It Works' onboarding screens", () -> {
-            onboardingPage.checkOnboardingScreenText("Get honest wine ratings on any wine from our community of millions of wine drinkers");
-            onboardingPage.checkOnboardingScreenText("Shop the world’s largest wine selection directly from your phone");
-            onboardingPage.checkOnboardingScreenText("Scan any bottle to learn all about the wine inside");
-            onboardingPage.checkOnboardingScreenText("Scan a restaurant wine list and choose your wine with confidence");
+            onboardingPage.checkOnboardingScreenText("Get honest wine ratings on any wine from our community of millions of wine drinkers")
+                    .checkOnboardingScreenText("Shop the world’s largest wine selection directly from your phone")
+                    .checkOnboardingScreenText("Scan any bottle to learn all about the wine inside")
+                    .checkOnboardingScreenText("Scan a restaurant wine list and choose your wine with confidence");
         });
         step("Check 'How It Works' onboarding is finished", () -> {
             onboardingPage.finalOnboardingScreenText.isDisplayed();

@@ -9,12 +9,12 @@
 
 ## Для запуска тестов используются команды:
 ```bash
-gradle clean ${DEVICE_FARM}
+gradle clean test -DdeviceFarm="${DEVICE_FARM}"
 ```
 В качестве параметра `${DEVICE_FARM}` может быть передано:
-- browserstack_android - для запуска в **[Browserstack](https://www.browserstack.com/)**
-- selenoid_android - для запуска в **[Selenoid](https://selenoid.autotests.cloud/wd/hub/)**
-- local_android - для запуска локально через **[Appium](https://appium.io/)**
+- browserstack - для запуска в **[Browserstack](https://www.browserstack.com/)**
+- selenoid - для запуска в **[Selenoid](https://selenoid.autotests.cloud/wd/hub/)**
+- local - для запуска локально через **[Appium](https://appium.io/)**
 
 ## Запуск тестов происходит в CI [Jenkins](https://jenkins.autotests.cloud/job/08-krissirin-diplomMobile/)
 <img src="images/Jenkins.png">
